@@ -8,7 +8,7 @@ body{
 }
 
 .headerdiv{
-    color:rgba(255, 255, 255, 0.945);
+    color:rgba(255, 255, 255, 0.80);
     font-family: 'Roboto', sans-serif;
     font-size: calc(13vw + 20px);
     font-weight: 900;  
@@ -26,7 +26,7 @@ margin-top: -15px;
 }
 @keyframes flash {
     0%   {filter: blur(.5px);}
-    100%  {filter: blur(1.3px);}
+    100%  {filter: blur(1.5px);}
 }
 
 .about{
@@ -34,7 +34,7 @@ margin-top: -15px;
 }
 
 .skills{
-    color:rgba(255, 255, 255, 0.945);
+    color:rgba(255, 255, 255, 0.80);
     display: inline;
     padding-inline-start: 1.4vw;
     padding-inline-end: 1.4vw;
@@ -70,7 +70,7 @@ button{
     padding-left: 7px;
     padding-right: 5px;
     font-weight: bolder;
-    color: rgba(255, 255, 255, 0.945);
+    color:rgba(255, 255, 255, 0.80);
     background-color: transparent;
     filter: blur(1px);
     animation-name: flash;
