@@ -90,6 +90,7 @@ button:hover{
 @media screen and (min-width: 768px) {
     header{
         font-size: 100px;
+        color: tomato;
     }
     .skills{
         font-size: 50px;
