@@ -88,14 +88,14 @@ button:hover{
     animation-duration: 0.1s,1s;
     animation-iteration-count: infinite,infinite;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1250px) {
     header{
-        font-size: 100px;
-        color: tomato;
+        font-size: 120px;
     }
     .skills{
-        font-size: 50px;
-        margin-right: 20px;
+        font-size: 34px;
+        margin-block-end: 5px;
+        margin-block-start: 5px;
     }
     button{
         font-size: 80px;
@@ -104,13 +104,12 @@ button:hover{
         margin-top: calc(40vh + 10px);
     }
 }
-
+/*
 @media screen and (max-width: 600px){
     header{
         font-size: calc(13vw + 20px);
     }
     .skills{
-        color: yellow;
         padding-inline-start: 1.4vw;
         padding-inline-end: 1.4vw;
         font-size: calc(4vw + 6px);
