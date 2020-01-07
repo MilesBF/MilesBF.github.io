@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="stylesPortfolio.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+    <title>Miles Feldstein Portfolio</title>
+</head>
+<body>
+    <header class="run-animation">
+        Cactus Plant Flea Market Animated Header
+    </header>
+    <a href="https://cactusplantfleamarket.com" target="_blank">
+        <img src="Images/CPFMLogo.gif" class="run-animation">
+    </a>
+    <div>
+    <button id="Back" style="display: none;" onclick="back()">
+        Back
+    </button>
+    <button id="Next" onclick="next()">
+        Next
+    </button>
+    <script>
+        // class work {
+        //     constructor(Title, Image, URL){
+        //         this.Title = Title;
+        //         this.Image = Image;
+        //         this.URL = URL;
+        //     }
+        // }
+        var works = [{Title: "Cactus Plant Flea Market Animated Header",Image: "Images/CPFMLogo.gif", Url: "https://cactusplantfleamarket.com"}, {Title: "ATM Website Desgin", Image: "Images/ATMWebDesign.gif",Url: "http://fuckatm.com/"}, {Title: "World Wide Youth Animated Logo", Image: "Images/WWYLogo.gif",Url: "https://wwyshop.com/password"}];
+        var workIndex = 0;
+        function next(){
+        workIndex++;
+        if(workIndex == works.length-1){
+            document.getElementById("Next").style.display = "none"
+        } 
+        document.getElementsByTagName("header")[0].innerHTML = works[workIndex].Title;
+        document.getElementsByTagName("img")[0].src = works[workIndex].Image;
+        document.getElementsByTagName("a")[0].href = works[workIndex].Url;
+        document.getElementById("Back").style.display = "inline-block";
+        document.getElementsByTagName("header")[0].classList.add("run-animation");
+        document.getElementsByTagName("img")[0].classList.add("run-animation");
+
+        }
+        function back(){
+        workIndex--;
+        if(workIndex == 0){
+            document.getElementById("Back").style.display = "none"
+        }
+        document.getElementsByTagName("header")[0].innerHTML = works[workIndex].Title;
+        document.getElementsByTagName("img")[0].src = works[workIndex].Image;
+        document.getElementsByTagName("a")[0].href = works[workIndex].Url;
+        document.getElementById("Next").style.display = "inline-block"
+        }
+        
+            document.getElementsByTagName("header")[0].addEventListener("animationend", function(){
+                document.getElementsByTagName("header")[0].classList.remove("run-animation");
+                document.getElementsByTagName("img")[0].classList.remove("run-animation");
+
+            })
+    </script>
+</body>
+
+</html>
