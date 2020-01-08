@@ -116,14 +116,14 @@ button:hover{
 }
 @media screen and (min-width: 1250px) {
     header{
-        font-size: 80px;
+        font-size: 65px;
     }
 
     button{
         font-size: 80px;
     }
-    .btn{
-        margin-top: calc(40vh + 10px);
+    img{
+     max-width: 850px;   
     }
 }
 /*
