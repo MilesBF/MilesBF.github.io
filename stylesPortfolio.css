@@ -114,11 +114,13 @@ button:hover{
     animation-duration: 0.1s,1s;
     animation-iteration-count: infinite,infinite;
 }
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1050px) {
     header{
-        font-size: 65px;
+        font-size: 40px;
+        max-width:700px;
+        text-align:center;
+        margin:auto;
     }
-
     button{
         font-size: 80px;
     }
