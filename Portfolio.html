@@ -10,14 +10,19 @@
         Cactus Plant Flea Market Animated Header
     </header>
     <a href="https://cactusplantfleamarket.com" target="_blank">
-        <img src="CPFMLogo.gif" class="run-animation">
+        <img src="Images/CPFMLogo.gif" class="run-animation">
     </a>
+    <img src="BgGlitchMiles.gif" alt="Static Transition" id="staticover" class="staticanimation">
     <div>
     <button id="Back" style="display: none;" onclick="back()">
         Back
     </button>
     <button id="Next" onclick="next()">
         Next
+    </button>
+    <br>
+    <button onClick="location.href='index.html'">
+        Close Portfolio
     </button>
     <script>
         // class work {
@@ -27,7 +32,7 @@
         //         this.URL = URL;
         //     }
         // }
-        var works = [{Title: "Cactus Plant Flea Market Animated Header",Image: "CPFMLogo.gif", Url: "https://cactusplantfleamarket.com"}, {Title: "ATM Website Desgin", Image: "ATMWebDesign.gif",Url: "http://fuckatm.com/"}, {Title: "World Wide Youth Animated Logo", Image: "WWYLogo.gif",Url: "https://wwyshop.com/password"}];
+        var works = [{Title: "Cactus Plant Flea Market Animated Header",Image: "Images/CPFMLogo.gif", Url: "https://cactusplantfleamarket.com"}, {Title: "ATM Website Desgin", Image: "Images/ATMWebDesign.gif",Url: "http://fuckatm.com/"}, {Title: "World Wide Youth Animated Logo", Image: "Images/WWYLogo.gif",Url: "https://wwyshop.com/password"}];
         var workIndex = 0;
         function next(){
         workIndex++;
@@ -40,6 +45,7 @@
         document.getElementById("Back").style.display = "inline-block";
         document.getElementsByTagName("header")[0].classList.add("run-animation");
         document.getElementsByTagName("img")[0].classList.add("run-animation");
+        document.getElementById("staticover").classList.add("staticanimation")
 
         }
         function back(){
@@ -51,11 +57,15 @@
         document.getElementsByTagName("img")[0].src = works[workIndex].Image;
         document.getElementsByTagName("a")[0].href = works[workIndex].Url;
         document.getElementById("Next").style.display = "inline-block"
+        document.getElementsByTagName("header")[0].classList.add("run-animation");
+        document.getElementsByTagName("img")[0].classList.add("run-animation");
+        document.getElementById("staticover").classList.add("staticanimation")
         }
         
             document.getElementsByTagName("header")[0].addEventListener("animationend", function(){
                 document.getElementsByTagName("header")[0].classList.remove("run-animation");
                 document.getElementsByTagName("img")[0].classList.remove("run-animation");
+                document.getElementById("staticover").classList.remove("staticanimation")
 
             })
     </script>
